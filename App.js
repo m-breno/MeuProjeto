@@ -1,20 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Image, StyleSheet, Text, View } from 'react-native';
+
+import Capa from './assets/capa.png';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={ estilos.container }>
+      <Text style={ estilos.titulo }>Guerra do Amanhã</Text>
+      <Text style={ estilos.descricao }>Gêneros: Ação e ficção</Text>
+      
+      <Image 
+        source={ Capa } 
+        style={ estilos.img }
+      />
+
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const estilos = StyleSheet.create({
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  titulo: {
+    fontSize: 22,
+  },
+  descricao: {
+    marginBottom: 20
+  },
+  
+  img: {
+    width: 300,
+    height: 300,
+  },
+  
 });
