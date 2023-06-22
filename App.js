@@ -5,13 +5,13 @@ import PFP from './assets/pfp.jpg';
 
 export default function App() {
   return (
-    <View style={ estilos.container }>
+    <View>
         <Image style={ estilos.capa } source={ Capa }/>
 
       <View style={ estilos.container }>
         <Image style={ estilos.img } source={ PFP }/>
         <Text style={ estilos.titulo }>Michael Breno</Text>
-        <Text style={ estilos.descricao }>Programador Front-end</Text>
+        <Text style={ estilos.descricao }>"É melhor uma pedra no caminho do que duas no rim"</Text>
       </View>
     </View>
   );
@@ -20,21 +20,24 @@ export default function App() {
 const estilos = StyleSheet.create({
   
   container: {
-    height: '80%',
-    flex: 1,
+    height: '70%',
     backgroundColor: '#1E1E2E',
     alignItems: 'center',
-    justifyContent: 'center',
+    padding: 20,
   },
   
   titulo: {
-    fontSize: 22,
+    fontSize: 32,
+    fontWeight: 'bold',
     color: '#CDD6F4',
   },
 
   descricao: {
+    fontSize: 24,
     marginTop: 20,
     color: '#CDD6F4',
+    fontStyle: 'italic',
+    textAlign: 'center',
   },
 
   img: {
@@ -48,7 +51,7 @@ const estilos = StyleSheet.create({
   },
 
   capa: {
-    flex: 1,
     width: '100%',
+    height: '30%',
   },
 });
